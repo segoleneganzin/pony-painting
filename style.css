@@ -15,10 +15,10 @@ media-queries
 }
 body {
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   margin: 0;
 	padding: 0;
-	height: 100%;
+	height: 100vh;
   background-color: #0E880C;
   border: 10px groove #66695D;
 }
@@ -98,23 +98,24 @@ body {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 47%;
-  left: 0.5%;
-  width: 99%;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
   background-color: transparent;
 }
 .fence {
-  border-top: 10px solid #B0700D;
-  border-bottom: 10px solid #B0700D;
-  width: 80px;
-  height: 15px;
+  border-top: 8px solid #B0700D;
+  border-bottom: 8px solid #B0700D;
+  width: 8vw;
+  height: 40%;
+  z-index: -1;
 }
 .fence::before, .fence::after {
   content:"";
   position: absolute;
-  bottom: -10px;
-  width: 10px;
-  height: 50px;
+  bottom: 0;
+  width: 8px;
+  height: 110%;
   background-color: #B0700D;
 }
 
@@ -122,16 +123,17 @@ body {
 .field {
   position: absolute;
   width: 99%;
-  height: 20%;
-  top: 40%;
+  height: 50%;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 /*flowers*/
 .flower-container {
-  margin: 100px;
+  margin: 50px;
 }
 .flower-heart {
     position: absolute;
@@ -290,15 +292,15 @@ body {
 /*Pony*/
 .characters {
   position: absolute;
-  top: 35%;
+  bottom: 60%;
   left: 40%;
+  width: 100px;
+  height: 100px;
 }
 .pony {
-  width: 33vw;
-  height: 33vh;
+  width: 650px;
+  height: 500px;
   position: absolute;
-  top: 10%;
-  left: 30%;
   z-index: 1;
 }
 .head {
@@ -311,7 +313,6 @@ body {
   border-radius: 100%;
   border: 1px solid rgb(0, 0, 0, 0.4);
   box-shadow: 0px 2px 5px var(--color-pony);
-  z-index: 3;
 }
 .horsehair-container {
   display:flex;
@@ -407,7 +408,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 100% 100% 50% 50%;
-  z-index: 1;
+
   box-shadow: 0px 0px 5px grey; 
 }
 .dot-nose-left {
@@ -551,7 +552,7 @@ body {
   height: 135px;
   background-color: var(--color-pony);
   transform: rotate(-25deg);
-  z-index: 2;
+  z-index: -1;
 }
 .mane {
   position: absolute;
@@ -575,6 +576,7 @@ body {
   height: 150px;
   background-color: var(--color-pony);
   border-radius: 25%;
+  z-index: -2;
 }
 .belly::before, .belly::after {
   content: "";
@@ -621,88 +623,86 @@ body {
 .bush-container {
     display: flex;
     position: absolute;
-    right: 15%;
-    bottom: 100%;
-    width: 30%;
-    height: 30%;
-    z-index: 3;
+    left: 270px;
+    bottom: 0;
+    z-index: 99;
 }
 .center-bush {
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 125px;
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     background-color: #12560B;
     border-radius: 25% 25% 10% 10%;
 }
 /*top left*/
 .bush-leaf--1 {
     position: absolute;
-    top: 180px;
-    left: 110px;
-    width: 75px;
-    height: 75px;
+    top: 80px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*top*/
 .bush-leaf--2 {
     position: absolute;
-    top: 150px;
-    left: 150px;
-    width: 90px;
-    height: 90px;
+    top: 50px;
+    left: 170px;
+    width: 100px;
+    height: 100px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*top right*/
 .bush-leaf--3 {
     position: absolute;
-    top: 175px;
-    left: 200px;
-    width: 120px;
-    height: 120px;
+    top: 75px;
+    left: 210px;
+    width: 150px;
+    height: 150px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*middle left*/
 .bush-leaf--4 {
     position: absolute;
-    top: 230px;
-    left: 90px;
-    width: 100px;
-    height: 100px;
+    top: 200px;
+    left: 70px;
+    width: 140px;
+    height: 140px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*middle right*/
 .bush-leaf--5 {
     position: absolute;
-    top: 250px;
-    left: 220px;
-    width: 100px;
-    height: 100px;
+    top: 180px;
+    left: 250px;
+    width: 150px;
+    height: 150px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*bottom left*/
 .bush-leaf--6 {
     position: absolute;
-    top: 300px;
+    top: 270px;
     left: 80px;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     background-color: #12560B;
     border-radius: 100%;
 }
 /*bottom right*/
 .bush-leaf--7 {
     position: absolute;
-    top: 300px;
-    left: 240px;
-    width: 100px;
-    height: 100px;
+    top: 260px;
+    left: 280px;
+    width: 140px;
+    height: 140px;
     background-color: #12560B;
     border-radius: 100% 100% 100% 0;
 }
@@ -715,18 +715,13 @@ body {
     left: 10%;
   }
   .field {
-    top: 50%;
+    top: 30%;
     left: 10%;
     width: 80%;
   }
-  .bush-container {
-    bottom: 80%;
-  }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .fence-container {
-    top: 39%;
-  }
+
   #back-wall {
   height: 40%;    
   }
